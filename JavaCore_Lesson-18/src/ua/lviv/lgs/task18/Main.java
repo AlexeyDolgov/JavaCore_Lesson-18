@@ -1,13 +1,17 @@
 package ua.lviv.lgs.task18;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
 	public static void main(String[] args) {
 
-		MyMap<Integer, Integers> newMap = new MyMap<>(11, new Integers("2"));
+		MyMap<Integer, List<Integers>> newMap = new MyMap<>(11, new ArrayList<Integers>(Arrays.asList(new Integers("2"))));
 		
-		newMap.addNewEntry(22, new Integers("3"));
-		newMap.addNewEntry(33, new Integers("4"));
+		newMap.addNewEntry(22, new ArrayList<Integers>(Arrays.asList(new Integers("3"))));
+		newMap.addNewEntry(33, new ArrayList<Integers>(Arrays.asList(new Integers("4"))));
 		newMap.viewMap();
 		newMap.removeEntry(11);
 		newMap.viewMap();
